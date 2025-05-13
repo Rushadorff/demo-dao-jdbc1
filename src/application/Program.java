@@ -1,5 +1,7 @@
 package src.application;
 
+import src.model.dao.DaoFactory;
+import src.model.dao.SellerDao;
 import src.model.entities.Department;
 import src.model.entities.Seller;
 
@@ -11,6 +13,8 @@ public class Program {
 
         Seller seller = new Seller(21, "Bob","bob10@gmail.com", new Date(), 3000.0, obj);
 
+        SellerDao sellerDao = DaoFactory.createSellerDao();
+        
         System.out.println(seller);
     }
 }
